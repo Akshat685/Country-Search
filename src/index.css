@@ -1,0 +1,252 @@
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --accent-color: #fd7e14;
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: var(--dark-color);
+}
+
+/* Card Styles */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Region Card Styles */
+.region-card {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.region-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.region-card:hover::before {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+.region-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.region-card span {
+  position: relative;
+  z-index: 2;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+}
+
+/* Country Details Styles */
+.country-detail-container {
+  animation: fadeIn 0.5s ease-in-out;
+  padding: 2rem 0;
+}
+
+.flag-image {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.flag-image:hover {
+  transform: scale(1.02);
+}
+
+/* Border Countries Styles */
+.border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.border-badge {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px 16px !important;
+  font-size: 0.9rem !important;
+}
+
+.border-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.navbar {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+}
+
+.header-search {
+  max-width: 400px;
+}
+
+.header-search input {
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header-search input:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+  border-color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .header-search {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .dropdown-container {
+    width: 100%;
+  }
+  
+  .region-card {
+    height: 160px;
+  }
+  
+  .region-card span {
+    font-size: 1.5rem;
+  }
+}
+
+/* Custom Badge Styles */
+.badge {
+  padding: 8px 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Content Styles */
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.card-text {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Country Details Info Styles */
+.info-label {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+/* Dropdown Styles */
+.dropdown-toggle {
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+}

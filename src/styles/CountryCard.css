@@ -1,0 +1,51 @@
+/* CountryCard.css */
+
+.country-card {
+    height: 100%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    cursor: pointer;
+  }
+  
+  .country-card-img {
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .country-card-badge-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    z-index: 2;
+  }
+  
+  .country-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .country-card-info {
+    margin-bottom: 1rem;
+  }
+  
+  .country-card-info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+  }
+  
+  .border-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  
+  .border-badge {
+    font-size: 0.75rem;
+  }
+  

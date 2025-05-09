@@ -1,0 +1,47 @@
+.header-navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .header-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-primary {
+    margin-right: 0.5rem;
+    color: #0d6efd;
+  }
+  
+  .header-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  @media (min-width: 992px) {
+    .header-controls {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  .header-search {
+    flex-grow: 1;
+  }
+  
+  .search-input {
+    min-width: 200px;
+  }
+  
+  .filter-toggle {
+    width: 100%;
+    min-width: 160px;
+  }
+  
