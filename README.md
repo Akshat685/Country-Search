@@ -1,3 +1,61 @@
+Task 2: Country Searching and Sorting
+with React JS
+Objective: Build a country search and sort app using API calls. Implement search and
+sort functionality for displaying country cards.
+Requirements:
+● Technology: React JS
+
+● API: https://restcountries.com/v3.1/all
+
+Features:
+1. Create Four Pages with Corresponding Routes:
+○ Homepage (/)
+○ Country Details Page (/country/:countryName)
+○ Country Region Page (/country-region)
+○ Selected Region Page (/region/:regionName)
+2. Add a Common Header for All Pages:
+○ The header should contain a search field and a dropdown with two
+options: "Independent" and "Dependent."
+3. Country Card on Homepage:
+○ Display a country cards on the homepage with the following details:
+■ Country flag
+■ Country common name
+■ Country code
+■ Country region
+■ Country borders
+(Data to be fetched from the provided API.)
+4. Search Functionality:
+○ Allow users to search for countries by name, region, or country code using
+the search field in the header.
+○ Filter results based on the search input.
+5. Dropdown Functionality:
+○ When the "Independent" option is selected, show country cards for
+countries with the "independent" property set to true.
+○ When the "Dependent" option is selected, show country cards for
+countries with the "independent" property set to false.
+6. Country Details Page:
+○ When a country card is clicked, redirect to the Country Details Page
+(/country/:countryName), where you will display the details of the
+selected country:
+■ Country flag
+■ Country name
+■ Country code
+■ Country region
+■ Country borders
+7. Country Region Page:
+○ When the "Region" link is clicked, redirect to the Country Region Page
+(/country-region), where a static list of regions will be displayed.
+○ Hide the search field and dropdown on the Region Page.
+8. Selected Region Page:
+○ When a region is selected from the Country Region Page, redirect to the
+Selected Region Page (/region/:regionName), and show all
+countries related to the selected region.
+9. Borders Navigation:
+○ When a country border is clicked from the Country Details Page, redirect
+to the Country Details Page for the selected border country and display its
+details.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
